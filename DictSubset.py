@@ -7,7 +7,7 @@ if n < 2:
 try:
     if sys.argv[1].lower() == "help":
         print(
-            "Usage:\npython DictSubset.py <file_path> <min_length (inclusive)> <max_length (inclusive)> <input_file_delimiter> <output_file_delimiter>"
+            "This tool creates a subset of a dictionary file based on acceptable word lengths.\nUsage:\npython DictSubset.py <file_path> <min_length (inclusive)> <max_length (inclusive)> <input_file_delimiter> <output_file_delimiter>"
         )
         print("This tool replaces the original file. Please keep a backup if important")
         quit()
