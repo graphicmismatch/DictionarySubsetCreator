@@ -27,10 +27,11 @@ try:
         odelim = " "
     outp = dict({})
     file = open(sys.argv[1], "r")
-    content = file.read().split(idelim)
+    content = file.read().strip().split(idelim)
+
     file.close()
     for i in content:
-        if outp.get(i[0], None) == None:
+        if outp.get(str(i)[0], None) == None:
             outp.update({i[0]: []})
         outp[i[0]].append(i)
     for i in outp:
@@ -42,4 +43,5 @@ try:
         file.close()
 except Exception as e:
     print(e)
+    print(e.with_traceback[0])
     print("Please input the correct parameters")
